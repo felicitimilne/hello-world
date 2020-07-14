@@ -1,0 +1,23 @@
+---
+title: "3.6 Lab-Linear Regression"
+author: "Feliciti Milne"
+date: "July 14, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 3.6.1 Libraries
+```{r}
+library(MASS)
+library(ISLR)
+```
+
+## 3.6.2 Simple Linear Regression
+```{r}
+fix(Boston)
+names(Boston)
+```
+
