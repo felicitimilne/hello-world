@@ -1,0 +1,69 @@
+---
+title: "2.3 Lab_Intro to R"
+author: "Feliciti Milne"
+date: "July 7, 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 2.3.1 Basic Commands
+```{r}
+#Create a list
+x <- c(1,3,2,5)
+print(x)
+#Lists can be easily written over
+x = c(1,6,2)
+print(x)
+#Another list
+y = c(1,4,3)
+print(y)
+#Query list property such as length
+length(x)
+length(y)
+#Add the lists
+x+y
+#Now clear the lists from the variables 
+ls()
+rm(x,y)
+ls()
+
+#Intro to matrices
+x=matrix(data=c(1,2,3,4), nrow=2, ncol=2)
+print(x)
+#or
+matrix(c(4,3,2,1),2,2,byrow=TRUE) #not assigned to a variable 
+#Perform operations on matrices
+sqrt(x)
+x^2
+
+
+x=rnorm(50) #Generate a random samples of (n=50) with a normal distribution
+y=x+rnorm(50, mean=50, sd=.1) #Generates another random sample of 50 with a mean of 50 and a standard deviation of .1)
+cor(x,y) #Compute the correlation between the two randomly generated samples
+
+#Generate another random sample of 50
+set.seed(1303) #seeds allow results to be reporducable
+rnorm(50)
+
+#Generates a new random sample that can be reproduced by another user and perform operations on the sample to find its mean, variance, and standard deviation.
+set.seed(3)
+y=rnorm(100)
+mean(y)
+var(y)
+sqrt(var(y)) #Mathematical way of calculating the standard deviation
+sd(y) #but there is a built in function for that
+```
+
+## 2.3.2 Graphics
+```{r}
+x=rnorm(100)
+y=rnorm(100)
+plot(x,y)
+plot(x,y,xlab="this is the x-axis",ylab="this is the y-axis", main = "Plot of X vs Y")
+```
+
+
