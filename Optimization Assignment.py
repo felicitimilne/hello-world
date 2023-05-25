@@ -191,15 +191,12 @@ plt.savefig("Pie_Chart.png", bbox_inches='tight')
 plt.show()
 
 
-
 # you would need to compare this to other volitilities to see if it is really good or bad, but it is the best we can do under the constraints
 
 # Efficient Frontier
-
 # determine a set of portfolios that offer the best returns for a given risk, or the best risk for a given return, over all possible values
 
 # Use same data_stock data frame
-
 # calculate a new stock_volatility object that consists of the std of data_stock (before only calculated mean and cov)
 stock_volatility = data_stock.std()
 
